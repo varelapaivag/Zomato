@@ -1,12 +1,13 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
+import os
 
 
 
 
 # --- Menu ----
-image_file = 'pages\zomatologo.png'
+image_file = os.path.join('pages', 'zomatologo.png')
 image = Image.open(image_file)
 
 st.sidebar.image(image, width=240)
