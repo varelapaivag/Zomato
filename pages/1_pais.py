@@ -7,7 +7,7 @@ from haversine import haversine
 from streamlit_folium import folium_static
 import os
 
-df = pd.read_csv(r'C:\Users\guga1\OneDrive\Documentos\repos\zomato_restaurants\dataset\new_dataset.csv')
+df = pd.read_csv(r'..\dataset\new_dataset.csv')
 
 # Agrupamemnto s/ condição
 def count_grouped(df, cols, agrouped, by, ascending):
