@@ -11,7 +11,7 @@ from plotly.subplots import make_subplots
 import matplotlib.pyplot as plt
 import os
 
-df = pd.read_csv(r'..\dataset\new_dataset.csv')
+df = pd.read_csv('/Zomato/dataset/new_dataset.csv')
 
 st.set_page_config( page_title= "Visão Empresa", layout = 'wide')
 # Agrupamemnto s/ condição
