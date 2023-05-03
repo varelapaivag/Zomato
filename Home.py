@@ -3,7 +3,6 @@ import pandas as pd
 from PIL import Image
 
 
-df = pd.read_csv(r'C:\Users\guga1\OneDrive\Documentos\repos\zomato_restaurants\dataset\new_dataset.csv')
 
 
 # --- Menu ----
