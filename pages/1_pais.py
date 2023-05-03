@@ -7,7 +7,8 @@ from haversine import haversine
 from streamlit_folium import folium_static
 import os
 
-df = pd.read_csv(r'\dataset\new_dataset.csv')
+df = pd.read_csv('/dataset/new_dataset.csv')
+
 
 # Agrupamemnto s/ condição
 def count_grouped(df, cols, agrouped, by, ascending):
