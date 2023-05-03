@@ -7,7 +7,7 @@ from haversine import haversine
 from streamlit_folium import folium_static
 import os
 
-df = pd.read_csv('/Zomato/dataset/new_dataset.csv')
+df = pd.read_csv(f"./dataset/new_dataset.csv")
 
 
 # Agrupamemnto s/ condição
