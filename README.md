@@ -19,7 +19,7 @@ A empresa disponibilizou poucos dados, porém fornece estes diante ao mundo todo
 
 4. Qual o total de avaliações feitas? 
 
-	5. Qual o total de tipos de culinária registrados?
+5. Qual o total de tipos de culinária registrados?
 
 ## - Pais
 
@@ -104,7 +104,9 @@ culinária distintas?
 
 # Top 3 Insights
 1.Existe uma correlação entre a quantidade de culinária com a quantidade de mais entregas
+
 2.Os restaurantes com avalição > 4: Estão localizados em metrópoles ou capitais e possuem grande quantidade de avaliações. Já para as poucas quantidades de avaliações, percebe-se que é uma cidade pequena.
+
 3. Mesmo a Indian food sendo o principal pedido, os principais fast food americano é que são responsaveis por essa demanda, se aperfeiçoando as culinárias locais.
 
 
