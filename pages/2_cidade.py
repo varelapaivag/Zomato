@@ -146,16 +146,15 @@ with st.container():
         by = 'restaurant id'
         df1 = df.loc[:, cols].groupby(agrouped)['restaurant id'].count().reset_index()
 
-        df2 = df.loc[:, ['city', 'aggregate rating']].groupby('city')['aggregate rating'].mean().reset_index()
-        df3 = df.loc[:, ['restaurant id','city','aggregate rating']].groupby('aggregate rating').std().reset_index()
-        merged1 = pd.merge(df1, df2, on = 'city')
-        merged1 = merged1.reindex(columns = ['country code','city','restaurant id','aggregate rating'])
-        merged2 = pd.merge(merged1,df3, on = 'city')                                                                 
-#         df3.columns = ['Country','City','Count Restaurant','Avg Rating']
+        df2 = df.loc[:, ['country code','city', 'aggregate rating']].groupby(['country code','city']).agg(['mean', 'std']).reset_index().round(2)
+        
+        df3 = pd.merge(df1, df2, on = 'city')
+        df3.columns = ['City','Restaurant Id','Country','AVG Rating','STD Rating']
+        df3 = df3.reindex(columns = ['Country','City','Restaurant Id','AVG Rating','STD Rating'])
 
         st.markdown('#### Métrica Geral')
-        st.dataframe(merged2, use_container_width= True)
-    
+        st.write(df3.columns)
+        st.dataframe(df3, use_container_width= True)
     with col2: 
         #1) agrupamento de culinaria
         cuisines_city = df.loc[:, ['cuisines', 'city']].groupby('city').nunique().reset_index()
