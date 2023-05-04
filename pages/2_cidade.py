@@ -153,7 +153,6 @@ with st.container():
         df3 = df3.reindex(columns = ['Country','City','Restaurant Id','AVG Rating','STD Rating'])
 
         st.markdown('#### Métrica Geral')
-        st.write(df3.columns)
         st.dataframe(df3, use_container_width= True)
     with col2: 
         #1) agrupamento de culinaria
