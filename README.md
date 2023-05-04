@@ -103,6 +103,7 @@ culinária distintas?
 
 
 # Top 3 Insights
+
 1.Existe uma correlação entre a quantidade de culinária com a quantidade de mais entregas
 
 2.Os restaurantes com avalição > 4: Estão localizados em metrópoles ou capitais e possuem grande quantidade de avaliações. Já para as poucas quantidades de avaliações, percebe-se que é uma cidade pequena.
