@@ -96,7 +96,7 @@ pais = st.sidebar.multiselect('Países para análise:',
 
 st.sidebar.write("---")
 
-slider_rate = st.sidebar.slider('Avaliação: ',0, 5,(5)) #sincronizar com o df
+slider_rate = st.sidebar.slider('Avaliação: ',0, 5,(5))
 
 culinaria = st.sidebar.multiselect('Culinária:',
                                      culinaria,
@@ -147,13 +147,14 @@ with st.container():
         df1 = df.loc[:, cols].groupby(agrouped)['restaurant id'].count().reset_index()
 
         df2 = df.loc[:, ['city', 'aggregate rating']].groupby('city')['aggregate rating'].mean().reset_index()
-        
-        df3 = pd.merge(df1, df2, on = 'city')
-        df3 = df3.reindex(columns = ['country code','city','restaurant id','aggregate rating'])
-        df3.columns = ['Country','City','Count Restaurant','Avg Rating']
+        df3 = df.loc[:, ['restaurant id','city','aggregate rating'].groupby('aggregate rating'].std().reset_index()
+        merged1 = pd.merge(df1, df2, on = 'city')
+        merged1 = merged1.reindex(columns = ['country code','city','restaurant id','aggregate rating'])
+        merged2 = pd.merge(merged1,df3, on = 'city')                                                                 
+#         df3.columns = ['Country','City','Count Restaurant','Avg Rating']
 
         st.markdown('#### Métrica Geral')
-        st.dataframe(df3, use_container_width= True)
+        st.dataframe(merged2, use_container_width= True)
     
     with col2: 
         #1) agrupamento de culinaria
