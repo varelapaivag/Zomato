@@ -146,7 +146,7 @@ with st.container():
         by = 'restaurant id'
         df1 = df.loc[:, cols].groupby(agrouped)['restaurant id'].count().reset_index()
 
-        df2 = df.loc[:, ['country code','city', 'aggregate rating']].groupby(['country code','city']).agg(['mean', 'std']).reset_index(drop = True).round(2)
+        df2 = df.loc[:, ['country code','city', 'aggregate rating']].groupby(['country code','city']).agg(['mean', 'std']).reset_index().round(2)
         
         df3 = pd.merge(df1, df2, on = 'city')
         df3.columns = ['City','Restaurant Id','Country','AVG Rating','STD Rating']
