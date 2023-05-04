@@ -138,7 +138,7 @@ with st.container():
 
 with st.container():
     st.write("---")
-    col1, col2 = st.columns(2)
+    col1, col2 = st.columns((1.5,1))
     
     with col1:
         cols = ['city', 'restaurant id']
