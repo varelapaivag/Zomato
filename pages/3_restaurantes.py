@@ -139,7 +139,7 @@ with st.container():
     st.markdown(" ## Métricas")
     st.write("\n")
     st.write("\n")
-    col1, col2  = st.columns(2)
+    col1, col2  = st.columns((1.5,1))
     
     with col1:
         count_restaurant_rating = count_grouped(df, ['restaurant name','aggregate rating','country code'], ['country code','restaurant name'], 'aggregate rating', False)
